@@ -13,9 +13,13 @@ export default class Dropdown extends Component {
     })),
   };
 
+  static state = {value: null};
+
   componentDidMount() {
     this.element = $(this.refs.select);
-    this.element.dropdown();
+    this.element.dropdown({
+      onChange: this.handleChange
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -32,6 +36,10 @@ export default class Dropdown extends Component {
     type: META.type.module,
   };
 
+  handleChange(value) {
+    this.setState({value})
+  }
+
   render() {
     const options = _.map(this.props.options, (opt, i) => {
       return <option key={i} value={opt.value}>{opt.text}</option>;
@@ -47,9 +55,13 @@ export default class Dropdown extends Component {
     delete props.options;
 
     return (
-      <select {...props} className={classes} ref='select'>
-        {options}
-      </select>
+      <div>
+        {this.state.value}
+        <hr />
+        <select {...props} className={classes} ref='select'>
+          {options}
+        </select>
+      </div>
     );
   }
 }
