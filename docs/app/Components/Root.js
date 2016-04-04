@@ -11,6 +11,8 @@ import ComponentDoc from '../Components/ComponentDoc/ComponentDoc'
 import DocsMenu from '../Components/Sidebar/Sidebar'
 import style from '../Style'
 
+import NewDoc from '../Components/NewDoc'
+
 const { Grid, Segment } = stardust
 
 export default class Root extends Component {
@@ -46,9 +48,12 @@ export default class Root extends Component {
           <DocsMenu />
         </div>
         <div style={style.main}>
+          {/*
           <Grid className='vertically divided padded'>
             {components}
           </Grid>
+          */}
+          <NewDoc component='Label' />
         </div>
       </div>
     )

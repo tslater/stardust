@@ -139,7 +139,7 @@ webpackConfig.module.loaders = [{
   //
   // JSON
   //
-  test: /\.json$/,
+  test: /\.(json|babelrc)$/,
   loader: 'json',
 }, {
   //
