@@ -3,31 +3,31 @@ import { Rating } from 'stardust'
 
 const RatingSizeExample = () => (
   <div>
-    <Rating maxRating={5} rating={3} icon='star' size='mini' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='mini' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' size='tiny' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='tiny' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' size='small' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='small' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' />
+    <Rating maxRating={5} defaultRating={3} icon='star' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' size='large' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='large' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' size='huge' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='huge' />
     <br />
     <br />
 
-    <Rating maxRating={5} rating={3} icon='star' size='massive' />
+    <Rating maxRating={5} defaultRating={3} icon='star' size='massive' />
     <br />
     <br />
   </div>
